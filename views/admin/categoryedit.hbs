@@ -1,0 +1,29 @@
+                    {{!-- Edit Page (Admin) --}}
+<div class="container mt-3" style="margin-left:175px;">
+    <form action="/admin/edit/{{result._id}}" method="post" enctype="multipart/form-data">
+    <div>
+        <br>
+        Category : <input type="text" placeholder="Enter the Category" class="form-control" name="name" value="{{result.Category}}" >
+    </div>
+
+    <div>
+        <br>
+        Description : <textarea class="form-control" placeholder="Enter the Description" name="desc">{{result.Description}}</textarea>
+    </div>
+
+    <div>
+        <br>
+        Existing Image : <br><img src="/images/{{result.Image}}" width="200" height="200">
+    </div>
+
+    <div>
+        <br>
+        Update Image : <input type="file" class="form-control" name="file">
+    </div>
+
+    <div>
+        <br>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+    </form>
+</div>

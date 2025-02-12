@@ -1,0 +1,109 @@
+    <!--  Carousel    -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img class="d-block w-100" src="/images/img/1.jpg" alt="First slide" width="1248" height="207.01" >             
+          </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img class="d-block w-100" src="/images/img/2.jpg" alt="Second slide" width="1248" height="207.01" >             
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img class="d-block w-100" src="/images/img/3.jpg" alt="Third slide" width="1248" height="207.01">             
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--    Product Card    -->   
+<div class="categories" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+  <div class="container-fluid">
+    <br><br>
+    <h4><b>All Products</b></h4>
+    <hr>
+    <br>
+  </div>
+</div> 
+
+{{!-- Display Product Card --}}
+<div class="main">
+{{#each productinfo}}
+    <div class="col col-3">
+      <div class="card" style="width: 17rem; height: 22rem;" >
+        <a href="#"><img src="/images/{{this.ProductImage}}" class="card-img-top" width="200" height="200" alt="..."></a>
+        <div class="card-body">
+          <h6 class="card-title">{{this.ProductName}}</h6>
+          <h6 class="card-text"><strong>₹</strong>{{this.ProductPrice}}/-</h6>
+          <a href="/user/userproduct/{{this._id}}"><button type="submit" class="btn btn-primary btn-sm">View</button></a>
+          </div>
+          </div>     
+    </div>
+{{/each}}
+</div>
+
+    <!--    Category Card    --> 
+<div class="categories" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+  <div class="container-fluid">
+    <br><br><br>
+    <h4><b>All Categories</b></h4>
+    <hr>
+    <br>
+  </div>
+</div>
+
+{{!-- Display Category Card --}}
+<div class="main">
+{{#each categoryinfo}}
+    <div class="col col-3">
+      <div class="card" style="width: 17rem; height: 22rem;" >
+        <a href="#"><img src="/images/{{this.Image}}" class="card-img-top" width="200" height="200" alt="..."></a>
+        <div class="card-body">
+          <h6 class="card-title">{{this.Category}}</h6>
+          <a href="/user/usercategory/{{this._id}}"><button type="submit" class="btn btn-primary btn-sm">View</button></a>
+        </div>
+        </div>     
+    </div>
+{{/each}}
+</div>
+
+  
+{{!--         Footer       --}}
+<div class="blockcode" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-style: oblique;  ">
+  <footer class="shadow">
+    <div
+      class="d-flex bg-dark justify-content-between align-items-center mx-auto py-4 flex-wrap text-light"
+      style="width: 100%;"
+    >
+      <a href="/home" class="d-flex align-items-center p-0 text-light" style="text-decoration: none;">
+        <span class="ms-4 h5 font-weight-bold">Quikmart</span>
+      </a>
+      <small>&copy; Quikmart, 2024 . All rights reserved.</small>
+      <div>
+        <button class="btn btn-dark btn-flat p-2" >
+          <i class="fa-brands fa-facebook"></i>
+        </button>
+        <button class="btn btn-dark btn-flat p-2">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </button>
+        <button class="btn btn-dark btn-flat p-2">
+          <i class="fa-brands fa-square-instagram"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+</div>
+

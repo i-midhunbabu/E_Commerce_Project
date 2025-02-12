@@ -1,0 +1,28 @@
+                {{!-- Subcategory Page --}}
+<div class="container mt-3" style="margin-left: 190px;">
+        <div class="ms-auto text-end">
+        <a href="/admin/subcatadd"><button class="btn btn-success" type="submit">Add</button></a> 
+        </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result2}}
+            <tr>
+                <td>{{this.newForm.Category}}</td>
+                <td>{{this.Subcategory}}</td>
+                 <td>
+                    <a href="/admin/edit1/{{this._id}}"><button class="btn btn-warning" type="submit">Edit</button></a> 
+                    <a href="/admin/subcatadd/delete/{{this._id}}"><button class="btn btn-danger" type="submit">Delete</button></a>
+                </td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,51 @@
+{{!-- Admin Header Section --}}
+<header class="p-4 bg-dark text-white w-100 position-fixed" style="top: 0; left: 0; z-index: 1030;">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/home" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <span class="fs-4">Quikmart</span>
+      </a>
+      <div class="ms-auto text-end">
+       <a href="/logout"> <button type="button" class="btn btn-danger" style="border-radius: 20px;">Logout</button> </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+{{!-- Sidebar --}}
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark min-vh-100 position-fixed" style="width: 180px; top: 64px; left: 0;">
+  <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <br><br><br>
+    <span class="fs-5 ms-4">Admin</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a href="/admin" class="nav-link text-white " >
+      {{!-- active aria-current="page" --}}
+        &nbsp;Category
+      </a>
+    </li>
+    <li>
+      <a href="/admin/subcatadd" class="nav-link text-white" >
+        &nbsp;Subcategory
+      </a>
+    </li>
+    <li>
+      <a href="/admin/adminproduct" class="nav-link text-white">
+        &nbsp;Products
+      </a>
+    </li>
+        <li>
+      <a href="/admin/userlist" class="nav-link text-white" >
+        &nbsp;User List
+      </a>
+    </li>
+  </ul>
+  <hr>
+</div>
+
+<div class="container" style="margin-left: 220px; padding-top: 100px;">
+  <!-- Main content goes here -->
+</div>
+

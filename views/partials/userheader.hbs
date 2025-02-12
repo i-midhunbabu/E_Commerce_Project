@@ -1,0 +1,43 @@
+{{!-- User Header Section --}}
+<header class="p-4 bg-dark text-white">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/home" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <span class="fs-4">Quikmart</span>
+      </a>
+
+      <div class="ms-auto text-end">
+        {{#if user}}
+          <a href="/cart">
+            <div class="cart-icon">
+              <button type="submit" class="btn btn-light me-1" style="border: 0; border-radius:20px;">
+                <i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i>
+                {{#if cartCount}}
+                  <span class="cart-badge">{{cartCount}}</span>
+                {{/if}}
+              </button>
+            </div>
+          </a>
+          <a href="/order">
+            <button type="submit" class="btn btn-light me-1" style="border:0; border-radius:20px;">
+              Order
+              {{#if orderCount}}
+                <span class="order-badge">{{orderCount}}</span>
+              {{/if}}
+            </button>
+          </a>
+          <a href="/logout">
+            <button type="submit" class="btn btn-danger me-1" style="border-radius:20px;">Logout</button>
+          </a>
+        {{else}}
+          <a href="/register">
+            <button type="submit" class="btn btn-light me-1" style="border-radius:20px;">Register</button>
+          </a>
+          <a href="/login">
+            <button type="submit" class="btn btn-success me-1" style="border-radius:20px;">Login</button>
+          </a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>

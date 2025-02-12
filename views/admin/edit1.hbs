@@ -1,0 +1,37 @@
+             {{!--Subcat Edit Page --}}
+<div class="container" style="margin-left: 180px;">
+    <form action="/admin/subcatadd/{{result2._id}}" method="post">
+    <div>
+        <br>
+        Category : <select class="form-select" name="category" id="select">
+            {{!-- <option>..s e l e c t..</option> --}}
+            {{#each result}}
+            <option value="{{this._id}}">{{this.Category}}</option>
+            {{/each}}
+            </select>
+            <input type="hidden" value="{{result2.Category1}}" id="hide">
+    </div>
+
+        <div>
+        <br>
+        Subcategory : <input type="text" name="subcat" class="form-control" value="{{result2.Subcategory}}">
+    </div>
+
+    <div>
+        <br>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+    </form>
+</div>
+<script>
+    let a = document.getElementById('select');
+    let b = document.getElementById('hide').value;
+    for(i=0;i<a.options.length;i++)
+{
+    var option = a.options[i];
+    if(option.value==b){
+        option.selected = true;
+        break;
+    }
+}
+</script>

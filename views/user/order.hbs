@@ -1,0 +1,51 @@
+<h3 style="text-align:center; margin-top:2%; color:#000000; font-weight:bolder">Orders</h3>
+
+<section class="h-100 h-custom" style="background-color: #000814, #001d3d, #003566,#ffc300,#ffd60a;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                {{#each orderItems}}
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div>
+                                                        <img src="/images/{{this.productDetails.ProductImage}}" class="img-fluid rounded-3" alt="Item Image" style="width: 65px;">
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <h5>{{this.productDetails.ProductName}}</h5>
+                                                        <p>{{this.productDetails.ProductDescription}}</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <div style="width: 80px;">
+                                                        <h5 class="mb-0">₹{{this.productDetails.ProductPrice}}</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+
+                            <div class="col-lg-5">
+                                <div class="card text-white rounded-3" style="background-color:#000814">
+                                    <div class="card-body">
+                                        <h5 class="mb-0" style="font-weight: bolder;">Order Summary</h5>
+                                        <hr class="my-4">
+                                        <p class="mb-2">No. of Items: {{orderCount}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

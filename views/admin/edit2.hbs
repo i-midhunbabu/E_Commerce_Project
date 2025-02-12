@@ -1,0 +1,79 @@
+<div class="container mt-3" style="margin-left: 175px;">
+    <form action="/admin/edit2/{{result1._id}}" method="post" enctype="multipart/form-data">
+        <div>
+            <br>
+            Category: 
+            <select class="form-select" name="category" id="select">
+                {{#each result}}
+                <option value="{{this._id}}">{{this.Category}}</option>
+                {{/each}}
+            </select>
+            <input type="hidden" value="{{result1.Category2}}" id="hide">
+        </div>
+
+        <div>
+            <br>
+            Subcategory: 
+            <select class="form-select" name="subcategory" id="select1">
+                {{#each result2}}
+                <option value="{{this._id}}">{{this.Subcategory}}</option>
+                {{/each}}
+            </select>
+            <input type="hidden" value="{{result1.Subcategory1}}" id="hide1">
+        </div>
+
+        <div>
+            <br>
+            Product Name: <input type="text" name="productname" class="form-control" value="{{result1.ProductName}}">
+        </div>
+
+        <div>
+            <br>
+            Product Description: <textarea name="productdescription" class="form-control">{{result1.ProductDescription}}</textarea>
+        </div>
+
+        <div>
+            <br>
+            Product Price: <input type="number" name="productprice" class="form-control" value="{{result1.ProductPrice}}">
+        </div>
+
+        <div>
+            <br>
+            Existing Image :
+            <br>
+            <img src="/images/{{result1.ProductImage}}" width="200" height="200">
+        </div>
+
+        <div>
+            <br>
+            Product Image: <input type="file" name="file" class="form-control">
+        </div>
+
+        <div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    let a = document.getElementById('select');
+    let b = document.getElementById('hide').value;
+    for (let i = 0; i < a.options.length; i++) {
+        let option = a.options[i];
+        if (option.value == b) {
+            option.selected = true;
+            break;
+        }
+    }
+
+    let c = document.getElementById('select1');
+    let d = document.getElementById('hide1').value;
+    for (let i = 0; i < c.options.length; i++) {
+        let option = c.options[i];
+        if (option.value == d) {
+            option.selected = true;
+            break;
+        }
+    }
+</script>

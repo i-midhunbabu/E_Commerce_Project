@@ -1,0 +1,32 @@
+<div class="container mt-3" style="margin-left: 175px;">
+    {{!-- margin-left: 190px --}}
+        <div class="ms-auto text-end">
+        </div>
+        <br>
+        {{#if orders.length}}
+    <table class="table1 table-bordered"> 
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each orders}}
+            <tr>
+                <td>
+                <img src="/images/{{this.productDetails.ProductImage}}" width="100" height="100">
+                </td>
+                <td>{{this.productDetails.ProductName}}</td>
+                <td>{{this.productDetails.ProductDescription}}</td>
+                <td>₹{{this.productDetails.ProductPrice}}</td>
+            </tr>
+             {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <h3 style="text-align: center;">No orders by user</h3>
+    {{/if}}
+</div>

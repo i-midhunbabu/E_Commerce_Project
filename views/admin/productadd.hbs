@@ -1,0 +1,51 @@
+<div class="container" style="margin-left: 175px;">
+    <form action="/admin/productadd" method="post" enctype="multipart/form-data">
+        <div>
+            <br>
+            Category: 
+            <select class="form-select" name="category" id="category">
+                <option>..select..</option>
+                {{#each result}}
+                <option value="{{this._id}}">{{this.Category}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div>
+            <br>
+            Subcategory: 
+            <select class="form-select" name="subcategory" id="subcategory">
+                <option>..select..</option>
+                {{#each result2}}
+                <option value="{{this._id}}">{{this.Subcategory}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div>
+            <br>
+            Product Name: <input type="text" name="productname" class="form-control">
+        </div>
+
+        <div>
+            <br>
+            Product Description: <textarea name="productdescription" class="form-control"></textarea>
+        </div>
+
+        <div>
+            <br>
+            Product Price: <input type="number" name="productprice" class="form-control">
+        </div>
+
+        <div>
+            <br>
+            Product Image: <input type="file" name="file" class="form-control">
+        </div>
+
+        <div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+

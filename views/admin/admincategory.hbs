@@ -1,0 +1,31 @@
+                {{!-- Admin Page (admincategory) --}}
+<div class="container mt-3" style="margin-left: 140px;">
+    {{!-- margin-left: 190px --}}
+        <div class="ms-auto text-end">
+        <a href="/admin/categoryadd"><button class="btn btn-success" type="submit">Add</button></a> 
+        </div>
+        <br>
+    <table class="table1 table-bordered">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result}}
+            <tr>
+                <td>{{this.Category}}</td>
+                <td>{{this.Description}}</td>
+                <td><img src="/images/{{this.Image}}" width="100" height="100"></td>
+                <td>
+                    <a href="/admin/categoryedit/{{this._id}}"><button type="submit" class="btn btn-warning">Edit</button></a>
+                   <a href="/admin/admincategory/delete/{{this._id}}"> <button type="submit" class="btn btn-danger">Delete</button></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

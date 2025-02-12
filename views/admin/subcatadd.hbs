@@ -1,0 +1,50 @@
+             {{!--Subcat Add Page (Admin) --}}
+<div class="container" style="margin-left: 175px;">
+    <form action="" method="post">
+    <div>
+        <br>
+        Category : <select class="form-select" name="category">
+            <option>. .s e l e c t. .</option>
+            {{#each result}}
+            <option value="{{this._id}}">{{this.Category}}</option>
+            {{/each}}
+            </select>
+    </div>
+
+    <div>
+        <br>
+        Subcategory : <input type="text" name="subcat" class="form-control">
+    </div>
+
+    <div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
+</div>
+
+    <br>
+    <br>
+    <div class="container" >
+    <table class="table2 table-bordered">
+        <thead>
+            <tr align="left">
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result2}}
+            <tr>
+                <td>{{this.newForm.Category}}</td>
+                <td>{{this.Subcategory}}</td>
+                <td>
+                    <a href="/admin/edit1/{{this._id}}"><button class="btn btn-warning" type="submit">Edit</button></a> 
+                    <a href="/admin/subcatadd/delete/{{this._id}}"><button class="btn btn-danger" type="submit">Delete</button></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </div>
