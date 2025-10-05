@@ -1,5 +1,5 @@
-<h1>E-Commerce Site</h1>
-<p>This project is aimed at building an e-commerce website where users can add items to their cart and proceed to checkout. The user interface is built using HTML, CSS, and Bootstrap, with a backend powered by Node.js, Express.js, and Handlebars. <p>
+<h1>Quikmart</h1>
+<p>This project is aimed at building an e-commerce platform. The user interface is built using HTML, CSS, and Bootstrap, with a backend powered by Node.js, Express.js, and Handlebars with MongoDB serving as the database. <p>
 
 <h3>Technologies Used</h3>
 
